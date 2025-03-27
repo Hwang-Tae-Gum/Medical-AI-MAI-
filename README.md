@@ -5,7 +5,7 @@ The provided code is designed for a deep learning model that predicts gene expre
 
 ## Model Architecture
 The model architecture is based on EfficientNet B0, a pre-trained convolutional neural network (CNN) known for its efficiency and performance. The classifier layer is modified to output 3467 features, corresponding to the number of genes in the dataset. The model uses Mean Squared Error (MSE) as the loss function, and the Adam optimizer is set with a learning rate of 
-10^-4
+$10^{-4}$
 
 ## Dataset Information
 Training Dataset: Contains 6992 H&E stained tissue images, each associated with gene expression data for 3467 genes.
