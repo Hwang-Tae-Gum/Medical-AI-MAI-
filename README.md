@@ -16,11 +16,6 @@ class GeneExpressionModel(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = GeneExpressionModel().to(device)
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-4)
 ```
 
 ## Dataset Information
