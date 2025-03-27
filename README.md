@@ -1,7 +1,7 @@
 # Medical-AI-MAI
 
 ## Description
-The provided code is designed for a deep learning model that predicts gene expression levels from H&E stained tissue images. This model utilizes a pre-trained EfficientNet B0 architecture, fine-tuned for regression tasks to predict the expression levels of 3467 genes. The dataset consists of 6992 training images and 2277 test images, each associated with gene expression data.
+The provided code is designed for a deep learning model that predicts gene expression levels from H&E stained tissue images. This model was developed as part of the Medical AI (MAI) Competition, which aims to leverage AI technology to predict gene expression from H&E stained tissue images. The competition focuses on developing AI models that can efficiently analyze complex medical data and provide valuable insights into gene expression profiles. This model utilizes a pre-trained EfficientNet B0 architecture, fine-tuned for regression tasks to predict the expression levels of 3467 genes. The dataset consists of 6992 training images and 2277 test images, each associated with gene expression data.
 
 ## Model Architecture
 The model architecture is based on EfficientNet B0, a pre-trained convolutional neural network (CNN) known for its efficiency and performance. The classifier layer is modified to output 3467 features, corresponding to the number of genes in the dataset. The model uses Mean Squared Error (MSE) as the loss function, and the Adam optimizer is set with a learning rate of 
