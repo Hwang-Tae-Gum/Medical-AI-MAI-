@@ -7,6 +7,22 @@ The provided code is designed for a deep learning model that predicts gene expre
 The model architecture is based on EfficientNet B0, a pre-trained convolutional neural network (CNN) known for its efficiency and performance. The classifier layer is modified to output 3467 features, corresponding to the number of genes in the dataset. The model uses Mean Squared Error (MSE) as the loss function, and the Adam optimizer is set with a learning rate of 
 $10^{-4}$
 
+```python
+class GeneExpressionModel(nn.Module):
+    def __init__(self):
+        super(GeneExpressionModel, self).__init__()
+        self.model = models.efficientnet_b0(pretrained=True)
+        self.model.classifier[1] = nn.Linear(1280, 3467)
+
+    def forward(self, x):
+        return self.model(x)
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = GeneExpressionModel().to(device)
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=1e-4)
+```
+
 ## Dataset Information
 Training Dataset: Contains 6992 H&E stained tissue images, each associated with gene expression data for 3467 genes.
 
